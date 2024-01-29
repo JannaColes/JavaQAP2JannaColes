@@ -2,11 +2,12 @@ public class MyPoint {
   private int x;
   private int y;
 
+  // Constructors for MyPoint
   public MyPoint(int x, int y) {
     this.x = x;
     this.y = y;
   }
-
+ // Getters and Setters for x and y coordinates
   public int getX() {
     return x;
   }
@@ -23,6 +24,7 @@ public class MyPoint {
     this.y = y;
   }
 
+// Getters and Setters for x and y coordinates as an array
   public int[] getXY() {
     return new int[]{x, y};
   }
@@ -32,6 +34,7 @@ public class MyPoint {
     this.y = y;
   }
 
+// toString() method
   public double distance(int x, int y) {
     int xDiff = this.x - x;
     int yDiff = this.y - y;

@@ -3,8 +3,7 @@ public class CreditCard {
   private Money creditLimit;
   private Person owner;
 
-  // Constructor
-  
+  // Constructor to initialize CreditCard with details
   public CreditCard(Person newCardHolder, Money limit) {
     this.owner = newCardHolder;
     this.creditLimit = new Money(limit);
@@ -12,13 +11,11 @@ public class CreditCard {
   }
 
   // Get the balance as a new Money object
-
   public Money getBalance() {
     return new Money(balance);
   }
 
-  // Get the credit limit as a new Money pbject
-
+  // Get the credit limit as a new Money object
   public Money getCreditLimit() {
     return new Money(creditLimit);
   }
@@ -29,7 +26,6 @@ public class CreditCard {
   }
 
   // Charge the specified amount to the credit card
-
   public void charge(Money amount) {
     if (balance.add(amount).compareTo(creditLimit) <= 0) {
       balance = balance.add(amount);
@@ -41,7 +37,6 @@ public class CreditCard {
   }
 
   // Make a payment on the credit card
-
   public void payment(Money amount) {
     balance = balance.subtract(amount);
     System.out.println("Payment: " + amount);

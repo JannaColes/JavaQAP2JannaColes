@@ -2,8 +2,7 @@ public class MyLine {
   private MyPoint begin;
   private MyPoint end;
 
-  // Constructors
-  
+  // Constructors for MyLine
   public MyLine(int x1, int y1, int x2, int y2) {
     this.begin = new MyPoint(x1, y1);
     this.end = new MyPoint(x2, y2);
@@ -15,7 +14,6 @@ public class MyLine {
   }
 
   // Getters and Setters fr begin and end
-
   public MyPoint getBegin() {
     return begin;
   }
@@ -33,7 +31,6 @@ public class MyLine {
   }
 
   // Getters and Setters for x and y coordinates of begin and end
-
   public int getBeginX() {
     return begin.getX();
   }
@@ -67,7 +64,6 @@ public class MyLine {
   }
 
   // Getters and Setters for XY coordinates of begin and end
-  
   public int[] getBeginXY() {
     return begin.getXY();
   }

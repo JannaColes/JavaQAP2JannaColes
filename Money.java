@@ -22,27 +22,23 @@ public class Money {
     return new Money(totalAmount);
   }
     //Subtract otherAmount from this Money, returning a new Money object
-
     public Money subtract(Money otherAmount) {
       double totalAmount = this.getAmount() - otherAmount.getAmount();
       return new Money(totalAmount);
   }
   
   // Compare this Money to otherMoney
-
   public int compareTo(Money otherObject) {
     double difference = this.getAmount() - otherObject.getAmount();
     return Double.compare(difference, 0);
   }
 
   // Check if this Money is equal to otherMoney
-
   public boolean equals(Money otherObject) {
     return this.dollars == otherObject.dollars && this.cents == otherObject.cents;
   }
 
   // Get the amount represented by this Money object
-
   public double getAmount() {
     return dollars + (cents / 100.0);
   }

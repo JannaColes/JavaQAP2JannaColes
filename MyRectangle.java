@@ -11,19 +11,19 @@ MyRectangle         ------------
 
 +setTopLeft(topLeft: MyPoint):void
 
-getBottomRight(): MyPoint
++getBottomRight(): MyPoint
 
-setBottomRight(bottomRight: MyPoint):void
++setBottomRight(bottomRight: MyPoint):void
 
-getWidth(): double
++getWidth(): double
 
-getHeight(): double
++getHeight(): double
 
-getArea(): double
++getArea(): double
 
-getPerimeter(): double
++getPerimeter(): double
 
-toString(): String
++toString(): String
 ------------
  */
 
@@ -31,6 +31,7 @@ public class MyRectangle {
   private MyPoint topLeft;
   private MyPoint bottomRight;
 
+  // Constructors for MyRectangle
   public MyRectangle(int x1, int y1, int x2, int y2) {
     this.topLeft = new MyPoint(x1, y1);
     this.bottomRight = new MyPoint(x2, y2);
@@ -41,6 +42,7 @@ public class MyRectangle {
     this.bottomRight = bottomRight;
   }
 
+  // Getters and Setters for topLeft and bottomRight
   public MyPoint getTopLeft() {
     return topLeft;
   }
@@ -57,6 +59,7 @@ public class MyRectangle {
     this.bottomRight = bottomRight;
   }
 
+  // Getters and Setters for x and y coordinates of topLeft and bottomRight
   public double getWidth() {
     return Math.abs(bottomRight.getX() - topLeft.getX());
   }
@@ -73,6 +76,7 @@ public class MyRectangle {
     return 2 * (getWidth() + getHeight());
   }
 
+  // toString() method
   public String toString() {
     return "MyRectangle[topLeft=" + topLeft.toString() + ", bottomRight=" + bottomRight.toString() + "]";
   }

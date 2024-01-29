@@ -4,7 +4,7 @@ public class Address {
   private String state;
   private String zip;
 
-  // Constructor
+  // Constructor to initialize Address with details
   public Address(String street, String city, String state, String zip) {
     this.street = street;
     this.city = city;
@@ -12,7 +12,7 @@ public class Address {
     this.zip = zip;
   }
 
-  // Copy constructor
+  // Copy constructor to create a new Address object from an existing one 
 
   public Address(Address otherAddress) {
     this.street = otherAddress.street;
@@ -22,6 +22,7 @@ public class Address {
   }
 
   public String toString() {
+    // Return a formatted string of the address
     return String.format("%s, %s, %s, %s", street, city, state, zip);
   }
 }
